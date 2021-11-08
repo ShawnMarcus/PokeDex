@@ -11,7 +11,50 @@ body {
     align-items: center;
 }
 
+/* padding makes it so the e accent is not against the border */
 h1 {
     font-size: 50px;
     background-color: #3d7dca;
+    border: 5px solid #003a70;
+    color: #ffcb05; 
+    padding: 10px;
+    letter-spacing: 5px;
+    border-radius: 25px;
+}
+
+/* Styles for the Pokemon cards created in JS file. Center one element inside container div with flexbox, justify-content (center...which helps it also stay centered when the total number of "boxes" is unevenly split--like on the last line--and it keeps them centered too). Flex wrap makes it wrap onto the next line. */
+#container {
+    max-width: 1200px;
+    display: flexbox;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* width--, padding--, margin--gives space between squares for multi cards on page. Display flex makes the elements inside the pokeman class flexbot items, changing directions as above (direction column to display vertical, align items to center vertically). */
+.pokemon{
+    background-color: #3d7dca;
+    width: 175px;
+    padding: 20px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 20px;
+}
+
+/* we have this class so we can do a little background behind each pokemon image. */
+.img-container{
+    background-color: #003a70;
+    width: 120px;
+    height: 120px;
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+}
+
+/* margin-bottom removes the extra spacing from under the name */
+.name{
+    color: #003a70;
+    margin-bottom: 0;
 }
