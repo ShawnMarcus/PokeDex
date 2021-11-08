@@ -1,0 +1,17 @@
+/* The * selects EVERY element on the page */
+* {
+box-sizing: border-box;
+}
+
+/* flexbox on the body to make h1 and div flexbox items...therefore the direct child elements (h1 & Div) become flexbox items, making the default display ROW. We changed that to column so we make them display on top of each other, and centered horizontally using align items center.  */
+body {
+    background-color: #ffcb05;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    font-size: 50px;
+    background-color: #3d7dca;
+}
