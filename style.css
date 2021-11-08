@@ -1,3 +1,4 @@
+
 /* The * selects EVERY element on the page */
 * {
 box-sizing: border-box;
@@ -25,7 +26,7 @@ h1 {
 /* Styles for the Pokemon cards created in JS file. Center one element inside container div with flexbox, justify-content (center...which helps it also stay centered when the total number of "boxes" is unevenly split--like on the last line--and it keeps them centered too). Flex wrap makes it wrap onto the next line. */
 #container {
     max-width: 1200px;
-    display: flexbox;
+    display: flex;
     justify-content: center;
     flex-wrap: wrap;
 }
