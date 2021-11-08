@@ -29,3 +29,17 @@ function creatPokeCard(pokemon){
     <h3 class="name">${pokemon.data.name.toUpperCase()}</h3>
     `;
 }
+
+//We are going to use the function we created above (createPokeCard) inside this new function
+// The getPokemonData function makes an Axios GET request to the PokeAPI using a specific pokemon ID/number then takes the returned data and passes it into the createPokeCard function
+// The argument/value passed into the "id" parameter will be a number created in the loop in the next function (AKA the getPokemon function).
+async function getPokemonData(id){
+    // value for id is going to change each time the function is run (1, 2, 3, etc...)
+    const url = `https://pokeapi.co/api/v2/pokemon/${id}`;
+    const pokemonData = await axios.get(url);
+    console.log(pokemonData);
+    console.log(pokemonData.data.sprites.front_shiny);
+    console.log(pokemonData.data.name);
+    // the pokemonData is the response from the Axios GET request
+    creatPokeCard(pokemonData);
+} 
